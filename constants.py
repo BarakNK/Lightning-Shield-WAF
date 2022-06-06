@@ -5,3 +5,7 @@ SQLITE_PATH = "sqlite:///database.db?check_same_thread=False"
 LOGGING_FILENAME = "logs.txt"
 SQL_WHITELIST = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.@#<>/ " #These characters are allowed
 INJECTION_DETECTING_REGEX = "'(''|[^'])*'"
+FIREWALL_RULE_NAME = "Lightning Shield - WAF"
+MAX_CONNECTIONS_PER_IP = 25 #There is usually no point in having more than 25 connections per IP. Too many connections may cause a DoS.
+LOGGING_FILENAME = "logs.txt"
+LOGGING_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"

@@ -5,7 +5,7 @@ class logging_manager:
     def __init__(self):
         logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
+        format=constants.LOGGING_FORMAT,
         handlers=[
             logging.FileHandler(constants.LOGGING_FILENAME),
             logging.StreamHandler()

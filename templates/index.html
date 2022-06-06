@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Website's style-->
+    <link href="{{url_for('static', filename='style/style.css')}}" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+
+    <title>Lightning Shiled</title>
+
+</head>
+<body>
+
+<!-- Masthead-->
+<header class="masthead text-white text-center" id="mainScreen">
+    <div class="container d-flex align-items-center flex-column" id="insideMainScreen">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="{{url_for('static', filename='style/cyber-security.svg')}}" alt="..." width="50%" id="mainImage"/>
+        <!-- Masthead Heading-->
+
+        <h1 class="masthead-heading text-uppercase mb-0">Lightning Shiled</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-bug"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Protocet Your Website!</p>
+    </div>
+</header>
+<!------>
+<hr>
+
+
+<!--About-->
+<div class="text-black container" id="about">
+    <div class="text-center">
+        <h2 class="masthead-heading text-uppercase mb-0">Why Us?</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+
+    <div class="row w-100 text-center" >
+        <div class="col-md-6">
+            <h5>About us</h5>
+            <hr>
+            <p>
+            <i><u>Who are we?</u></i><br>
+            Our name is Nir and Barak and we developed the perfect sultion for your website!<br>
+           <i><u>Why did we do this project?</u></i><br>
+            We did this project in order to learn about web seciurity, and about web in general.
+            This project is also our Magshimim and Bagrut project ; )<br>
+            <i><u>Contact Us:</u></i><br>
+            Nir's Email: nirwil123@gmail.com<br>
+            Barak's Email: barack@fill-it.com
+            <p>
+        </div>
+        <div class="col-md-6">
+            <h5>Know more about Lightning Shiled</h5>
+            <hr>
+            <p>
+                <i><u>What is our project?</u></i><br>
+                Our project can defend your website in a reverse proxy way!<br><br>
+                <i><u>what is a reverse proxy?</u></i><br>
+                A reverse proxy is a server that stands between us and your web serer!<br><br>
+                <i><u>Why use a reverse proxy?</u></i><br>
+                Using reverse proxy can help defend your website! we can block attacks such as slow loris, sql injections, xss, csrf!<br><br>
+                <i><u>Ok I like it! How do I join?</u></i><br>
+                First you must register, and then sign up, and then point your domain at our ip address, and write your website domain - thats it!
+
+            </p>
+        </div>
+
+    </div>
+    <div class="row">
+        <a class="btn btn-outline-primary center-block" style="margin: 0 auto" href="signUp">Sign up!</a>
+    </div>
+</div>
+<!---->
+<hr>
+
+<!--Sign Up-->
+<div class="text-white" id="signUp">
+    <div class="container">
+        <form action="" method = "POST" enctype = "multipart/form-data" class="w-75" style="margin: 0 auto;">
+            <h1>Register to Lightning Shield</h1>
+            <hr>
+            <div class="form-group">
+                <h6>Username:</h6>
+                <input type="text" name = "name" id = "name" placeholder = "username" class = "form-control" required/>
+            </div>
+            <div class="form-group">
+                <h6>Email:</h6>
+                <input type="email" name = "email" id = "email" placeholder = "email" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <h6>Host Name (Domain):</h6>
+                <input type="text" name = "domain" id = "domain" placeholder = "domain" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <h6>Your Website's IP address:</h6>
+                <input type="text" name = "ip" id = "cpassword" placeholder = "ip adress" class="form-control" required/>
+            </div>
+
+            <button type = "submit" class = "btn btn-outline-primary">Sign Up</button>
+            {% if msg%}
+            {{ msg }}
+            {% endif%}
+        </form>
+    </div>
+</div>
+<!---->
+<hr>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Scroll to:</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#mainScreen">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#signUp">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright Nir And Barak</div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

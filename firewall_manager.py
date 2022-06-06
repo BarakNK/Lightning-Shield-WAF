@@ -68,10 +68,6 @@ class firewall_defense:
         return [ip_address.ip for ip_address in self.db.get_all_blocked_ips()]
 
 
-    def save_to_db(self):
-        pass #TODO: Nir don't forget to implement this function!!!
-
-
     def possible_DoS_attack(self, sock, ip, connections_count):
         """
         This function checks if the given IP address has too many connections, which might indicate a possible DoS attack.

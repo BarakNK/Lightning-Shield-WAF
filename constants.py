@@ -9,3 +9,4 @@ FIREWALL_RULE_NAME = "Lightning Shield - WAF"
 MAX_CONNECTIONS_PER_IP = 25 #There is usually no point in having more than 25 connections per IP. Too many connections may cause a DoS.
 LOGGING_FILENAME = "logs.txt"
 LOGGING_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
+SOCKET_TIMEOUT = 25 #This is the time in seconds that the socket will wait for a response from the user. (To avoid slow-loris attacks)

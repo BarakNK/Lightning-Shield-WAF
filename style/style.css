@@ -1,0 +1,20 @@
+
+.panel, #footer {
+    background-color: #cccccc;
+    border-radius: 25px;
+}
+
+body {
+    /*background-color: #4b2626;*/
+    background: url("https://img.freepik.com/free-vector/cyber-security-background_42421-319.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.widget-blob-sperator {
+    padding-bottom: 0.5rem;
+}
+#side_gadgets {
+    padding-top: 3rem;
+}

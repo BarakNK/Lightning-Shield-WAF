@@ -1,10 +1,10 @@
-from database_model import *
+from database_models import *
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import time
 import constants
 
-engine = create_engine(consts.SQLITE_PATH)
+engine = create_engine(constants.SQLITE_PATH)
 Base.metadata.create_all(engine)
 
 class database_manager:

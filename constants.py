@@ -2,3 +2,4 @@
 HOST = "127.0.0.1"
 PORT = 8000
 SQLITE_PATH = "sqlite:///database.db?check_same_thread=False"
+LOGGING_FILENAME = "logs.txt"
